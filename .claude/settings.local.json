@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(xargs head:*)",
+      "WebFetch(domain:developers.google.com)",
+      "WebFetch(domain:developers.cloudflare.com)",
+      "Bash(python3:*)",
+      "Bash(swift build:*)",
+      "Bash(swift test:*)",
+      "Bash(git:*)"
+    ]
+  }
+}
