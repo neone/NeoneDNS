@@ -1,7 +1,10 @@
 import Foundation
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 
 /// Configuration for the DNS client.
-public struct DNSClientConfiguration: Sendable {
+public struct DNSClientConfiguration: @unchecked Sendable {
     /// The DNS providers to query. Defaults to Google and Cloudflare.
     public let providers: [any DNSProvider]
 

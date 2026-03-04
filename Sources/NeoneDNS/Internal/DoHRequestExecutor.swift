@@ -1,4 +1,7 @@
 import Foundation
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 
 /// Shared logic for building and executing DoH requests.
 /// Both Google and Cloudflare providers delegate to this.

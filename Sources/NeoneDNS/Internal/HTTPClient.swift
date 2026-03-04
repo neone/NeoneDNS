@@ -1,4 +1,7 @@
 import Foundation
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 
 /// Internal protocol abstracting HTTP data fetching for testability.
 protocol HTTPClient: Sendable {
@@ -6,7 +9,7 @@ protocol HTTPClient: Sendable {
 }
 
 /// Default implementation using Foundation's URLSession.
-struct URLSessionHTTPClient: HTTPClient {
+struct URLSessionHTTPClient: HTTPClient, @unchecked Sendable {
     let session: URLSession
 
     init(session: URLSession = .shared) {

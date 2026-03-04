@@ -1,4 +1,7 @@
 import Foundation
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 
 /// DNS-over-HTTPS provider using Cloudflare DNS.
 ///
